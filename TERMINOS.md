@@ -3,8 +3,8 @@
 **Última actualización:** 12 de noviembre de 2026
 **Versión:** 1.0
 **Bot:** Matechat — usuario de Discord `1062131587380170813`
-**Repositorio:** https://github.com/Kevinmoth/MateWoWChat
-**Contacto:** https://github.com/Kevinmoth/MateWoWChat/issues
+**Repositorio:** https://github.com/Kevinmoth/MateChat
+**Contacto:** https://github.com/Kevinmoth/MateChat/issues
 
 ---
 
@@ -20,7 +20,7 @@ Estos Términos se complementan con la [Política de Privacidad](PRIVACIDAD.md),
 
 ## 2. Descripción del servicio
 
-Matechat es un bot que conecta el chat de Discord con el chat de **World of Warcraft**:
+Matechat es un bot que conecta el chat de Discord:
 
 - Retransmite mensajes entre canales de Discord y canales del juego.
 - Ejecuta comandos informativos (`?who`, `?online`, `?gmotd`).
@@ -57,7 +57,7 @@ El servicio se ofrece **gratis y "tal cual"**, sin garantía de disponibilidad, 
 - Intentar extraer, recolectar o perfilar datos de otros usuarios.
 - Explotar vulnerabilidades, sobrecargar el servicio o interferir con su funcionamiento.
 - Suplantar a otra persona o hacer pasar por el operador a terceros.
-- Usar el bot para automatizar conductas prohibidas por el servidor de WoW (por ejemplo, botting o farmeo automatizado).
+- Usar el bot para automatizar conductas prohibidas por el servidor(por ejemplo, botting o farmeo automatizado).
 
 El operador puede suspender o denegar el acceso al bot, total o parcialmente, ante un uso abusivo, sin previo aviso y sin obligación de indemnizar.
 
@@ -79,8 +79,8 @@ Quien invita y configura el bot asume que:
 Para funcionar, el bot necesita las credenciales de una cuenta de World of Warcraft, que el operador o administrador proporciona en el archivo de configuración.
 
 - Las credenciales se guardan en texto plano en el servidor donde corre el bot. **El usuario es responsable de la seguridad de ese servidor.**
-- El bot no comparte esas credenciales con terceros; solo las usa para autenticarse contra el servidor de WoW configurado.
-- Automatizar una sesión de juego puede contravenir las normas del servidor de WoW. **El riesgo de sanciones sobre la cuenta (suspensión, baneo, pérdida de personajes) es exclusivamente del titular de la cuenta.**
+- El bot no comparte esas credenciales con terceros; solo las usa para autenticarse contra el servidor configurado.
+- Automatizar una sesión de juego puede contravenir las normas del servidor . **El riesgo de sanciones sobre la cuenta (suspensión, baneo, pérdida de personajes) es exclusivamente del titular de la cuenta.**
 - El operador no se hace responsable de sanciones aplicadas por el servidor de juego, ni de la pérdida de cuentas, personajes u objetos.
 
 ---
@@ -91,7 +91,6 @@ El bot depende de servicios que no controla:
 
 - **Discord** (API, gateway y reglas de la plataforma).
 - **GitHub** (consulta de versión y distribución del proyecto).
-- **Servidor de World of Warcraft** (NaerZone por defecto).
 - **comunidadnaer.com** (destino de los enlaces generados, solo al hacer clic).
 
 El operador no es responsable de caídas, cambios de política, límites de velocidad, bloqueos o sanciones aplicadas por esos terceros. Matechat **no está afiliado a Discord, Blizzard Entertainment ni NaerZone**.
@@ -148,6 +147,6 @@ Si alguna cláusula resulta inválida o inaplicable, las restantes conservarán 
 
 ## 14. Contacto
 
-- **Issues:** https://github.com/Kevinmoth/MateWoWChat/issues
-- **Repositorio:** https://github.com/Kevinmoth/MateWoWChat
+- **Issues:** https://github.com/Kevinmoth/MateChat/issues
+- **Repositorio:** https://github.com/Kevinmoth/MateChat
 - **Operador:** Kevinmoth
