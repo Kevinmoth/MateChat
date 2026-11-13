@@ -127,7 +127,7 @@ object WoWChat extends StrictLogging {
 
   private def checkForNewVersion = {
     // This is JSON, but I really just didn't want to import a full blown JSON library for one string.
-    val data = Source.fromURL("https://api.github.com/repos/Kevinmoth/MateWoWChat/releases/latest").mkString
+    val data = Source.fromURL("https://api.github.com/repos/Kevinmoth/MateChat/releases/latest").mkString
     val regex = "\"tag_name\":\"(.+?)\",".r
     val repoTagName = regex
       .findFirstMatchIn(data)
@@ -138,7 +138,7 @@ object WoWChat extends StrictLogging {
       logger.error( "~~~ !!!                Tu version esta desactualizada               !!! ~~~")
       logger.error(s"~~~ !!!                      Version:  $RELEASE                      !!! ~~~")
       logger.error(s"~~~ !!!                     vercion del repo    Version:  $repoTagName                      !!! ~~~")
-      logger.error( "~~~ !!! descarga la actualizacion de https://github.com/Kevinmoth/MateWoWChat/releases  !!! ~~~")
+      logger.error( "~~~ !!! descarga la actualizacion de https://github.com/Kevinmoth/MateChat/releases  !!! ~~~")
       logger.error( "~~~ !!!                Tu version esta desactualizada               !!! ~~~")
     }
   }
