@@ -33,6 +33,10 @@ discord {
   #  Cataclysm - http://cata-twinhead.twinstar.cz
   #  MoP       - http://mop-shoot.tauri.hu
   item_database=""
+  
+  # Estado personalizado del bot en Discord (texto libre). Dejar vacio para usar
+  # el estado automatico "N guildies online" generado por el bot.
+  # custom_status=""
 }
 
 # Configuracion global de WoW

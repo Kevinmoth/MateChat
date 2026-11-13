@@ -44,6 +44,7 @@ class Discord(discordConnectionCallback: CommonConnectionCallback) extends Liste
   // Estado de presencia por sesion: cada sesion de WoW reporta su texto y
   // el bot muestra la combinacion de todas en una sola presencia.
   private val sessionStatuses = mutable.LinkedHashMap[String, String]()
+  private val customStatus: Option[String] = Global.config.discord.customStatus.filter(_.trim.nonEmpty)
   private var firstConnect = true
 
   def updateSessionStatus(sessionId: String, message: String): Unit = {
@@ -55,8 +56,9 @@ class Discord(discordConnectionCallback: CommonConnectionCallback) extends Liste
 
   private def refreshSessionStatus: Unit = {
     val combined = sessionStatuses.values.mkString(" | ")
-    if (combined.nonEmpty && jda.getStatus == Status.CONNECTED) {
-      jda.getPresence.setActivity(Activity.of(ActivityType.CUSTOM_STATUS, combined))
+    val text = customStatus.getOrElse(combined)
+    if (text.nonEmpty && jda.getStatus == Status.CONNECTED) {
+      jda.getPresence.setActivity(Activity.of(ActivityType.CUSTOM_STATUS, text))
     }
   }
 

@@ -26,6 +26,10 @@ discord {
   enable_tag_failed_notifications=1
   # Sitio usado para los links de items/hechizos/misiones
   item_database="http://comunidadnaer.com"
+  
+  # Estado personalizado del bot en Discord (texto libre). Dejar vacio para usar
+  # el estado automatico "N guildies online" generado por el bot.
+  # custom_status="Jugando con el chat de la hermandad"
 
   # ===========================================================================
   # EMOTES Y FORMATO - se aplican a los mensajes WoW->Discord, en orden.

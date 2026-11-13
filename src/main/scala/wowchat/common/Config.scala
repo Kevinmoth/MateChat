@@ -22,7 +22,7 @@ case class FormatRule(pattern: String, replacement: String) {
   // con un mensaje claro, no en mitad de un mensaje de chat.
   val compiled: java.util.regex.Pattern = java.util.regex.Pattern.compile(pattern)
 }
-case class DiscordConfig(token: String, enableDotCommands: Boolean, dotCommandsWhitelist: Set[String], enableCommandsChannels: Set[String], enableTagFailedNotifications: Boolean, itemDatabase: Option[String], formatRules: Seq[FormatRule])
+case class DiscordConfig(token: String, enableDotCommands: Boolean, dotCommandsWhitelist: Set[String], enableCommandsChannels: Set[String], enableTagFailedNotifications: Boolean, itemDatabase: Option[String], formatRules: Seq[FormatRule], customStatus: Option[String])
 case class Wow(locale: String, platform: Platform.Value, realmBuild: Option[Int], gameBuild: Option[Int], realmlist: RealmListConfig, account: Array[Byte], password: String, character: String, enableServerMotd: Boolean)
 case class RealmListConfig(name: String, host: String, port: Int)
 case class GuildConfig(notificationConfigs: Map[String, GuildNotificationConfig])
@@ -69,7 +69,8 @@ object WowChatConfig extends GamePackets {
           .getOrElse(new util.ArrayList[String]()).asScala.map(_.toLowerCase).toSet,
         getOpt[Boolean](discordConf, "enable_tag_failed_notifications").getOrElse(true),
         getOpt[String](discordConf, "item_database"),
-        parseFormatRules(discordConf)
+        parseFormatRules(discordConf),
+         getOpt[String](discordConf, "custom_status").filter(_.trim.nonEmpty)
       ),
       Wow(
         getOpt[String](wowConf, "locale").getOrElse("enUS"),
