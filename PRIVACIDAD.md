@@ -3,8 +3,8 @@
 **Última actualización:** 12 de noviembre de 2026
 **Versión:** 1.0
 **Bot:** Matechat — usuario de Discord `1062131587380170813`
-**Repositorio:** https://github.com/Kevinmoth/MateWoWChat
-**Contacto:** https://github.com/Kevinmoth/MateWoWChat/issues
+**Repositorio:** https://github.com/Kevinmoth/MateChat
+**Contacto:** https://github.com/Kevinmoth/MateChat/issues
 
 ---
 
@@ -12,9 +12,9 @@
 
 Matechat ("el bot") es un bot de Discord desarrollado y operado por **Kevinmoth** ("el operador").
 
-Matechat es un proyecto independiente. **No está afiliado, asociado ni respaldado por Discord Inc., Blizzard Entertainment ni el servidor de World of Warcraft con el que se conecte** (por defecto, NaerZone / `comunidad.naerzone.com`).
+Matechat es un proyecto independiente. **No está afiliado, asociado ni respaldado por Discord Inc., Blizzard Entertainment ni el servidor de juego con el que se conecte** (por defecto, NaerZone / `comunidad.naerzone.com`).
 
-Esta política describe qué datos trata el bot cuando se lo invita a un servidor de Discord y se lo conecta a una cuenta de World of Warcraft.
+Esta política describe qué datos trata el bot cuando se lo invita a un servidor de Discord y se lo conecta a una cuenta de juego.
 
 ---
 
@@ -22,8 +22,8 @@ Esta política describe qué datos trata el bot cuando se lo invita a un servido
 
 Matechat funciona como puente entre canales de Discord y el chat dentro del juego:
 
-- Retransmite mensajes de Discord hacia canales del chat de WoW (según la configuración del operador).
-- Retransmite mensajes del chat de WoW hacia canales de Discord.
+- Retransmite mensajes de Discord hacia canales del chat del juego (según la configuración del operador).
+- Retransmite mensajes del chat del juego hacia canales de Discord.
 - Responde a comandos escritos en Discord (`?who`, `?online`, `?gmotd`) con información del juego.
 - Publica un estado personalizado ("N guildies online") calculado a partir de la lista de miembros de la hermandad **en el juego**.
 
@@ -56,7 +56,7 @@ Matechat funciona como puente entre canales de Discord y el chat dentro del jueg
 
 | Dato | Para qué |
 |---|---|
-| Nombre y clase del personaje, y credenciales de la cuenta de juego | Iniciar sesión en el servidor de WoW (las provee el propio operador en su configuración) |
+| Nombre y clase del personaje, y credenciales de la cuenta de juego | Iniciar sesión en el servidor de juego (las provee el propio operador en su configuración) |
 | Mensajes del chat del juego (canal, autor y texto) | Retransmitirlos a Discord |
 | Lista de miembros de la hermandad: nombre, nivel, clase, zona, estado en línea y última desconexión | Mostrar el estado "N guildies online" y responder `?who` |
 | Mensaje del día de la hermandad (MOTD) y notificaciones del servidor | Retransmitirlas a Discord si están configuradas |
@@ -88,7 +88,6 @@ Matechat **no vende, alquila ni cede datos a anunciantes**. Los datos solo pasan
 | Destino | Qué se envía | Cuándo |
 |---|---|---|
 | **Discord** (API y gateway) | Los mensajes y metadatos que el bot envía o recibe | Siempre que el bot está conectado |
-| **Servidor de World of Warcraft** (NaerZone por defecto) | Los mensajes retransmitidos y las credenciales de la cuenta de juego | Siempre que hay una sesión activa |
 | **GitHub** (`api.github.com`) | Una consulta `GET` para comprobar si hay una versión nueva del bot. No incluye datos de usuarios: solo IP, User-Agent y la versión del bot | Una vez, al arrancar |
 | **comunidadnaer.com** | Nada de forma automática. El bot solo genera enlaces; la visita ocurre si un usuario hace clic | Al hacer clic en un enlace |
 
@@ -110,14 +109,14 @@ El bot **no utiliza base de datos**. Todo el estado operativo vive en memoria y 
 | Registros de la consola | Hosting del operador | Según la configuración del hosting (puede ser desde horas hasta meses) |
 | Archivo de configuración con credenciales | Disco del servidor del operador | Hasta que el operador lo borre o rote |
 
-Las credenciales de la cuenta de juego y el token de Discord se guardan **en texto plano** en el archivo de configuración del servidor donde corre el bot. No se transmiten a nadie más que al servicio correspondiente (Discord y el servidor de WoW).
+Las credenciales de la cuenta de juego y el token de Discord se guardan **en texto plano** en el archivo de configuración del servidor donde corre el bot. No se transmiten a nadie más que al servicio correspondiente (Discord y el servidor de juego).
 
 ---
 
 ## 7. Seguridad
 
 - La comunicación con Discord viaja cifrada (HTTPS/WSS).
-- La conexión con el servidor de WoW utiliza el protocolo del juego (no TLS); el operador debe confiar en la red y el servidor de destino.
+- La conexión con el servidor de juego utiliza el protocolo del juego (no TLS); el operador debe confiar en la red y el servidor de destino.
 - El bot solicita únicamente los permisos e intents que necesita para funcionar.
 - El acceso al servidor donde corre el bot y a su archivo de configuración queda bajo responsabilidad del operador.
 
@@ -135,7 +134,7 @@ Podés solicitar:
 - **Oposición** o **limitación** al tratamiento.
 - **Portabilidad** de los datos que hayas aportado.
 
-Para ejercerlos, abrí un issue en https://github.com/Kevinmoth/MateWoWChat/issues o contactá al operador en el servidor donde está instalado el bot.
+Para ejercerlos, abrí un issue en https://github.com/Kevinmoth/MateChat/issues o contactá al operador en el servidor donde está instalado el bot.
 
 Tené en cuenta que:
 
@@ -161,8 +160,8 @@ Esta política puede actualizarse para reflejar cambios en el bot o en la normat
 
 ## 11. Contacto
 
-- **Issues:** https://github.com/Kevinmoth/MateWoWChat/issues
-- **Repositorio:** https://github.com/Kevinmoth/MateWoWChat
+- **Issues:** https://github.com/Kevinmoth/MateChat/issues
+- **Repositorio:** https://github.com/Kevinmoth/MateChat
 - **Operador:** Kevinmoth
 
 Para consultas sobre datos personales, indicá en el asunto "Privacidad — Matechat" y el servidor o usuario involucrado.
